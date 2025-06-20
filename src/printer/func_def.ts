@@ -30,7 +30,7 @@ function formatParamsHorizontally(paramList: SyntaxNode): doc.builders.Doc[] {
   return [
     '(',
     allParams.params.join(', '),
-    allParams.localVars.length ? ',   ' : '',
+    allParams.localVars.length ? ',    ' : '',
     allParams.localVars.join(', '),
     ')',
   ]

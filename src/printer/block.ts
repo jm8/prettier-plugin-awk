@@ -12,13 +12,13 @@ export const formatBlock: Printer<SyntaxNode>['print'] = (path, _options, print)
 
   if (statementsCount === 0) return ['{}']
 
-  if (
-    statementsCount === 1 &&
-    !separatedNodes.has(node.firstNamedChild!.type) &&
-    node.descendantsOfType('comment').length === 0
-  ) {
-    return group(['{', indent([line, path.call(print, 'firstNamedChild')]), line, '}'])
-  }
+  // if (
+  //   statementsCount === 1 &&
+  //   !separatedNodes.has(node.firstNamedChild!.type) &&
+  //   node.descendantsOfType('comment').length === 0
+  // ) {
+  //   return group(['{', indent([line, path.call(print, 'firstNamedChild')]), line, '}'])
+  // }
 
   return [
     '{',
